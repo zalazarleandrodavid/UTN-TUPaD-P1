@@ -127,8 +127,85 @@ if pal:
                     pal2 == vocales[4] or pal2 == vocales[5] or
                     pal2 == vocales[6] or pal2 == vocales[7] or
                     pal2 == vocales[8] or pal2 == vocales[9])
+
 if es_vocal:            # Si es_vocal es verdadera se aplica lo solicitado
     salida= pal + "!"
     print(salida)
 else:
     print(pal)
+
+
+# 8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 
+# dependiendo de la opción que desee: 
+# 1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO. 
+# 2. Si quiere su nombre en minúsculas. Por ejemplo: pedro. 
+# 3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro. 
+# El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el 
+# usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(), 
+# lower() y title() de Python para convertir entre mayúsculas y minúsculas. 
+
+
+print("Escribe tu nombre")
+name = str(input())
+
+print("Escribir la Opcion deseada")
+print("Escribe 1 Si quiere su nombre en mayúsculas")
+print("Escribe 2 Si quiere su nombre en minúsculas")
+print("Escribe 3 Si quiere su nombre con la primera letra mayúscula")
+
+num= int(input())
+
+if num == 1:
+    mayus= name.upper()
+    print(mayus)
+elif num == 2:
+    minus= name.lower()
+    print(minus)
+
+elif num == 3:
+    title= name.title()
+    print(title)
+
+
+# 9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la 
+# magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado 
+# por pantalla: 
+# ● Menor que 3: "Muy leve" (imperceptible). 
+# ● Mayor o igual que 3  y menor que 4: "Leve" (ligeramente perceptible). 
+# ● Mayor o igual que 4  y menor que 5: "Moderado" (sentido por personas, pero 
+# generalmente no causa daños). 
+# ● Mayor o igual que 5  y menor que 6: "Fuerte" (puede causar daños en estructuras 
+# débiles). 
+# ● Mayor o igual que 6  y menor que 7: "Muy Fuerte" (puede causar daños significativos). 
+# ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+
+
+print("Describa la magnitud del terremoto que presencio")
+
+print("Menor que 3: Muy leve (imperceptible)")
+print("Mayor o igual que 3  y menor que 4: Leve (ligeramente perceptible)")
+print("Mayor o igual que 4  y menor que 5: Moderado (sentido por personas, pero generalmente no causa daños). ")
+print("Mayor o igual que 5  y menor que 6: Fuerte (puede causar daños en estructuras débiles).")
+print("Mayor o igual que 6  y menor que 7: Muy Fuerte (puede causar daños significativos).")
+print("Mayor o igual que 7: Extremo (puede causar graves daños a gran escala).")
+
+num= float(input("Por favor indicar el valor numerico"))
+
+if num <=3:
+    print("El terremoto que describe esta considerado como muy leve")
+
+elif num >= 3 and num <4:
+    print("El terremoto que describe esta considerado como leve ")
+
+elif num >= 4 and num <5:
+    print("El terremoto que describe esta considerado como moderado ")
+
+elif num >= 5 and num <6:
+    print("El terremoto que describe esta considerado como fuerte ")
+
+elif num >= 6 and num <7:
+    print("El terremoto que describe esta considerado como muy fuerte ")
+
+elif num >= 7:
+    print("El terremoto que describe esta considerado como extremo ")
+
