@@ -115,4 +115,20 @@ print(moda)
 # pantalla.
 
 print("Por una palabra o frase")
-pasw = str(input()) 
+pal = str(input()) # Leemos la data del usuario
+vocales= "AEIOUaeiou" # Asiganamos valor a la variable a comparar
+
+if pal:
+
+    pal2= pal[-1] # Restamos uno para poder comparar la ultima letra
+
+    es_vocal = (pal2 == vocales[0] or pal2 == vocales[1] or     # generamos comparacion atravez de la posicion
+                    pal2 == vocales[2] or pal2 == vocales[3] or
+                    pal2 == vocales[4] or pal2 == vocales[5] or
+                    pal2 == vocales[6] or pal2 == vocales[7] or
+                    pal2 == vocales[8] or pal2 == vocales[9])
+if es_vocal:            # Si es_vocal es verdadera se aplica lo solicitado
+    salida= pal + "!"
+    print(salida)
+else:
+    print(pal)
