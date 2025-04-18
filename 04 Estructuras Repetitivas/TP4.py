@@ -26,5 +26,33 @@ for i in range(num1 +1, num2):
 suma= str(cont)   
 print(" La suma de dos numeros enteros ingresados es ",suma)
 
+# 4) Elabora un programa que permita al usuario ingresar números enteros y los sume en 
+# secuencia. El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese 
+# un 0.
+cont= 0 
+num= 1
+while num != 0: 
+    num= int(input("Colocar tu numero"))
     
+    cont = cont + num
+    print(cont)
     
+# 5) Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el 
+# programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
+import random
+print(" Juega a encuentra el numero")
+
+cont= 0 
+num= 0
+numero_secreto = random.randint(0, 9)
+
+while numero_secreto > 0 and numero_secreto <=9: 
+    num= int(input("Colocar tu numero de entre 0 y 9"))
+    cont = cont + 1
+  
+    if num < numero_secreto:
+        print(" Tu numero es menor")
+    elif num > numero_secreto:
+        print(" Tu numero es mayor")
+    elif num == numero_secreto:
+        print(" Felicidades encontraste tu numero y tus cantidad de intentos fueron:",cont)    
