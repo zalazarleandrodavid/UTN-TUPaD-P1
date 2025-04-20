@@ -81,3 +81,42 @@ for i in range(num1 +1, num2):
 suma= str(cont)   
 print(" La suma de todos los números comprendidos entre 0 y un numero positivo es ",suma)
 
+# 8) Escribe un programa que permita al usuario ingresar 100 números enteros. Luego, el 
+# programa debe indicar cuántos de estos números son pares, cuántos son impares, cuántos son 
+# negativos y cuántos son positivos. (Nota: para probar el programa puedes usar una cantidad 
+# menor, pero debe estar preparado para procesar 100 números con un solo cambio). 
+
+
+print(f"Por favor, ingrese la cantidad de números enteros a trabajar:")
+cantidad_numeros = int(input()) # Cantidad de numeros a ingresar
+
+pares = 0
+impares = 0
+positivos = 0
+negativos = 0
+
+if cantidad_numeros > 100:
+    print("Error: no puede colocar más de 100 números")
+else:
+    for i in range(cantidad_numeros): # Ciclo para ingreso de numeros segun el usuario
+        print("Ingrese el número :", i + 1)
+        numero = int(input())
+        
+        if numero % 2 == 0: # Comprobacion de pares e impares
+            pares += 1
+        else:
+            impares += 1
+
+        if numero > 0:
+            positivos += 1
+        elif numero < 0:
+            negativos += 1
+
+    print(" Analisis de numeros ")
+    print(f"Cantidad de números pares:", pares)
+    print(f"Cantidad de números impares:", impares)
+    print(f"Cantidad de números positivos: ", positivos)
+    print(f"Cantidad de números negativos:", negativos)
+
+
+
