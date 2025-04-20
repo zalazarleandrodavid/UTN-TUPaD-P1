@@ -56,3 +56,28 @@ while numero_secreto > 0 and numero_secreto <=9:
         print(" Tu numero es mayor")
     elif num == numero_secreto:
         print(" Felicidades encontraste tu numero y tus cantidad de intentos fueron:",cont)    
+        
+# 6) Desarrolla un programa que imprima en pantalla todos los números pares comprendidos 
+# entre 0 y 100, en orden decreciente. 
+
+i = 100
+
+while i >= 0:
+    print(i)
+    i = i - 2
+    
+# 7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un 
+# número entero positivo indicado por el usuario. 
+
+
+num1= 0
+num2= int(input("Indicar el menor de tus numeros"))
+
+cont=0
+
+for i in range(num1 +1, num2):
+    cont = cont+ i
+    
+suma= str(cont)   
+print(" La suma de todos los números comprendidos entre 0 y un numero positivo es ",suma)
+
