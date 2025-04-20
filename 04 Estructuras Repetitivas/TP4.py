@@ -103,20 +103,51 @@ else:
         numero = int(input())
         
         if numero % 2 == 0: # Comprobacion de pares e impares
-            pares += 1
+            pares = pares + 1
         else:
-            impares += 1
+            impares = pares + 1
 
-        if numero > 0:
-            positivos += 1
+        if numero > 0:  # Comprobacion de positivos y negativos
+            positivos = positivos + 1
         elif numero < 0:
-            negativos += 1
+            negativos= negativos + 1
 
     print(" Analisis de numeros ")
-    print(f"Cantidad de números pares:", pares)
-    print(f"Cantidad de números impares:", impares)
-    print(f"Cantidad de números positivos: ", positivos)
-    print(f"Cantidad de números negativos:", negativos)
+    print("Cantidad de números pares:", pares)
+    print("Cantidad de números impares:", impares)
+    print("Cantidad de números positivos: ", positivos)
+    print("Cantidad de números negativos:", negativos)
+
+# 9) Elabora un programa que permita al usuario ingresar 100 números enteros y luego calcule la 
+# media de esos valores. (Nota: puedes probar el programa con una cantidad menor, pero debe 
+# poder procesar 100 números cambiando solo un valor).
 
 
+print(f"Por favor, ingrese la cantidad de números enteros a trabajar:")
+cantidad_numeros = int(input()) # Cantidad de numeros a ingresar
 
+suma = 0
+media = 0
+
+if cantidad_numeros > 100:
+    print("Error: no puede colocar más de 100 números")
+else:
+    for i in range(cantidad_numeros): # Ciclo para ingreso de numeros segun el usuario
+        print("Ingrese el número :", i + 1)
+        numero = int(input())
+        suma =  suma + numero       # Se usa acomula y se va su mando por cada iteracion 
+    
+    media = suma / cantidad_numeros # Calcular la media
+    print(media)
+    
+# 10) Escribe un programa que invierta el orden de los dígitos de un número ingresado por el 
+# usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745. 
+
+num = int(input("Introducir su numero: "))
+num2 = str(num) # convierte la cadena en string
+num_invertido = ""
+
+for i in reversed(num2): # reversed invierte la cadena
+    num_invertido = num_invertido + i
+
+print("El número invertido es:", num_invertido)
